@@ -1,4 +1,4 @@
-# ConectaLead
+# ConectaLead - Vuetify
 
 ## Clonar o repositório
 ```bash
