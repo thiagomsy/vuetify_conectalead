@@ -1,56 +1,44 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
+    <v-main class="grey lighten-2">
+      <div style="height: 100%" class="d-flex flex-column flex-md-row justify-space-around align-center">
+        <LeadCard
+          name="Conversões"
+          value="25 M"
+          subtitle="Conversão é a ação do envio de qualquer formulário."
+          icon_name="mdi-email-outline"
+          icon_color="#1E93FF"
+          class="my-2"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+        <LeadCard
+          name="Leads"
+          value="965321"
+          subtitle=" Lead é um contato individual do cliente ao enviar formulários."
+          icon_name="mdi-account-outline"
+          icon_color="#B030FF"
+          class="my-2"
+        />
+        <LeadCard
+          name="Custo por lead"
+          value="R$ 10"
+          subtitle=" É o cálculo do investimento utilizado pela quantidade de leads gerados no período."
+          icon_name="mdi-currency-usd"
+          icon_color="#28CC56"
+          class="my-2"
         />
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import LeadCard from "./components/LeadCard";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    HelloWorld,
+    LeadCard,
   },
 
   data: () => ({
@@ -58,3 +46,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+#app {
+  font-family: 'DM Sans', sans-serif;
+}
+</style>
