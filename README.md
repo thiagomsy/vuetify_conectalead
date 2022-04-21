@@ -2,7 +2,7 @@
 
 ## Clonar o repositório
 ```bash
-$ git clone https://github.com/thiagomsy/vue_conectalead.git
+$ git clone https://github.com/thiagomsy/vuetify_conectalead.git
 ```
 
 ## ⚙ Inicializar o Projeto
