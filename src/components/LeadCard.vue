@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="2" outlined width="300px">
+  <v-card elevation="2" outlined height="128px" width="300px" style="position: relative">
     <v-card-text>
       <v-list>
         <v-list-item>
@@ -18,16 +18,14 @@
           </v-list-item-content>
 
           <v-list-item-action>
-            <v-tooltip bottom>
+            <v-tooltip top>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn icon>
-                <v-icon
-                    color="grey lighten-1"
-                    dark
+                <v-btn icon color="#608289" class="tooltip-icon">
+                  <v-icon
                     v-bind="{attrs}"
                     v-on="on"
                   >
-                    mdi-information
+                    mdi-information-outline
                   </v-icon>
                 </v-btn>
               </template>
@@ -45,3 +43,11 @@ export default {
   props: ["name", "value", "subtitle", "icon_name", "icon_color"],
 };
 </script>
+
+<style scoped>
+  .tooltip-icon{
+    position: absolute;
+    right: -16px;
+    top: -24px;
+  }
+</style>
